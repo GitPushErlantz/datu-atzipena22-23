@@ -6,6 +6,8 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.io.IOException;
 
+//CopyLines, baina lerro bakoitzaren hasieran lerro zenbakia jarriko du.
+
 public class CopyLinesZenbakiekin {
     public static void main(String[] args) throws IOException {
 

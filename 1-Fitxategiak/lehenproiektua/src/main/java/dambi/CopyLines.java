@@ -5,6 +5,8 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.io.IOException;
 
+//xanadu.txt fitxategia lerroz lerro irakurri eta outagain.txt fitxategian kopiatzen du.
+
 public class CopyLines {
     public static void main(String[] args) throws IOException {
 

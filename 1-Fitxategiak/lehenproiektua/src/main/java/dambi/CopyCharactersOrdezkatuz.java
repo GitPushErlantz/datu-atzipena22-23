@@ -4,6 +4,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+//CopyCharacters, baina kopiako "a" guztiak "o"-ren gatik aldatuta egongo dira.
+
 public class CopyCharactersOrdezkatuz {
     public static void main(String[] args) throws IOException {
 

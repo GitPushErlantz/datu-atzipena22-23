@@ -1,7 +1,7 @@
 package dambi;
 
 /**
- * Hello world!
+ * Hello world! inprimatuko du
  *
  */
 public class App {

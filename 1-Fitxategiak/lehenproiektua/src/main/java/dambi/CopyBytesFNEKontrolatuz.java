@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+//CopyBytes, baina mezu bat erakutsiko du fitxategia falta baldin bada.
+
 public class CopyBytesFNEKontrolatuz {
     public static void main(String[] args) throws IOException {
 

@@ -4,6 +4,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+//xanadu.txt fitxategia karakterez karaktere irakurri eta outagain.txt fitxategian kopiatzen du.
+
 public class CopyCharacters {
     public static void main(String[] args) throws IOException {
 

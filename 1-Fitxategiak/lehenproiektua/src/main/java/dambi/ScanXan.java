@@ -3,6 +3,8 @@ package dambi;
 import java.io.*;
 import java.util.Scanner;
 
+//BufferedReader bat erabiliz xanadu.txt irakurriko du eta hitzez hitz erakutsiko du, hitz bakoitza bere lerroan.
+
 public class ScanXan {
     public static void main(String[] args) throws IOException {
         Scanner s = null;

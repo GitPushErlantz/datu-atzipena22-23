@@ -3,6 +3,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+//xanadu.txt fitxategia bytez byte irakurri eta outagain.txt fitxategian kopiatzen du.
+
 public class CopyBytes {
     public static void main(String[] args) throws IOException {
 

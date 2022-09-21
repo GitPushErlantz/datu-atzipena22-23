@@ -4,6 +4,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+//CopyCharacters, baina kopiako karaktere guztiak maiuskulaz egongo dira.
+
 public class CopyCharactersMaiuskulaz {
     public static void main(String[] args) throws IOException {
 
