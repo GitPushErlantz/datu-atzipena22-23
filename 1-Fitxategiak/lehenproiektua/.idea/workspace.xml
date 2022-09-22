@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="96f9954f-98b8-4c06-aea5-30bd5c0a8907" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../characteroutput.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dambi/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dambi/CopyBytes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dambi/CopyBytesFNEKontrolatuz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dambi/CopyCharacters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dambi/CopyCharactersMaiuskulaz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dambi/CopyCharactersOrdezkatuz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dambi/CopyLines.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dambi/CopyLinesZenbakiekin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dambi/ScanXan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/twr/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/twr/CopyBytes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/twr/CopyBytesFNEKontrolatuz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/twr/CopyCharacters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/twr/CopyCharactersMaiuskulaz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/twr/CopyCharactersOrdezkatuz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/twr/CopyLines.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/twr/CopyLinesZenbakiekin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/twr/ScanXan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dambi/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dambi/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dambi/CopyBytes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dambi/CopyBytesFNEKontrolatuz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dambi/CopyCharacters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dambi/CopyCharactersMaiuskulaz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dambi/CopyCharactersOrdezkatuz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dambi/CopyLines.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dambi/CopyLinesZenbakiekin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dambi/ScanXan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/twr/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/twr/CopyBytes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/twr/CopyBytesFNEKontrolatuz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/twr/CopyCharacters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/twr/CopyCharactersMaiuskulaz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/twr/CopyCharactersOrdezkatuz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/twr/CopyLines.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/twr/CopyLinesZenbakiekin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/twr/ScanXan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/dambi/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../outagain.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../xanadu.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2F7GyfEH3Dbk1JKyAVjMeFBNdux" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96f9954f-98b8-4c06-aea5-30bd5c0a8907" name="Changes" comment="" />
+      <created>1663835967896</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663835967896</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
