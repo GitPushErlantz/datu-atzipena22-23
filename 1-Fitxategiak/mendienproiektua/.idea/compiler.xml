@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mendiencsva" target="1.7" />
+      <module name="mendiencsva" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,9 +1,6 @@
 package dambi;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,19 +8,33 @@ public class MainMenua {
     public static void main(String[] args) {
         int aukera = 9;
         Scanner in = new Scanner(System.in);
-        try {
-            System.out.println("* /sys/ Attempting to read file...");
-            FileReader InputStream = new FileReader("Mendiak.csv");
+        System.out.println("* /sys/ Attempting to read file...");
+        ArrayList<String> taula = new ArrayList<String>(); //Create the ArrayList so it can be detected everywhere
+        try (FileReader inputStream = new FileReader("Mendiak.csv")) { //Try finding the file and creating the FileReader
             System.out.println("* /sys/ File successfully read!");
-            System.out.println();
+            //ArrayListera hitzak sartu
+            //TODO: ReadLine erabili letraz letra egin ordez
+            int ch;
+            String word = "";
+            while ((ch = inputStream.read()) != -1) {
+                if((char)ch != ';' && (char)ch != '\n'){
+                    word = word + (char)ch;
+                }
+                else{
+                    taula.add(word);
+                    word = "";
+                }
+            }
+            taula.add(word);
         } catch (FileNotFoundException e) {
             System.out.println("* /sys/ File not found");
-            System.out.println("* /help/ You're here: " + new File("").getAbsoluteFile());
+            System.out.println("* /help/ You're here: " + new File("").getAbsoluteFile()); //helps debugging
             aukera = 0; //not to enter the menu
+        } catch (IOException e) {
+            System.out.println("* /sys/ An error has occurred.");
         }
+
         if (aukera != 0) { //to prevent FileNotFoundException
-            ArrayList<String> taula = new ArrayList<String>();
-            //TODO: ArrayListera datuak sartu
             do {
                 System.out.println("MENDIEN MENUA");
                 System.out.println("==============================");
@@ -63,6 +74,6 @@ public class MainMenua {
     }
 
     public static void zerrenda(ArrayList<String> taula) {
-        //TODO: ArrayList taula irakurri eta printf batean sartu
+        //TODO: Zerrenda formatu onean jarri
     }
 }
