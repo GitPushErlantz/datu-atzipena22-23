@@ -31,8 +31,7 @@ public class MainMenua {
             System.out.println("* /sys/ An error has occurred.");
         }
 
-        if (aukera != 0) { //to prevent FileNotFoundException
-            do {
+        while (aukera != 0) { //to prevent FileNotFoundException
                 System.out.println("MENDIEN MENUA");
                 System.out.println("==============================");
                 System.out.println("1. Mendien zerrenda ikusi (taula formatuan)");
@@ -65,10 +64,9 @@ public class MainMenua {
                         System.out.println("Aukera okerra, saiatu berriz.");
                 }
                 System.out.println();
-            } while (aukera != 0);
+            }
             in.close();
         }
-    }
 
     public static void zerrenda(ArrayList<String> taula) {
         for (int i = 0; i < taula.size(); i += 3) { //grabs groups of 3
@@ -82,13 +80,12 @@ public class MainMenua {
     public static void altuena(ArrayList<String> taula) {
         int tallest = 0;
         int tallestID = 0;
-        for(int i = 3; i < taula.size(); i+=3) { //grabs groups of 3, also skips the title
-            if (Integer.parseInt(taula.get(i+1)) > tallest) {
-                tallest = Integer.parseInt(taula.get(i+1));
+        for (int i = 3; i < taula.size(); i += 3) { //grabs groups of 3, also skips the title
+            if (Integer.parseInt(taula.get(i + 1)) > tallest) {
+                tallest = Integer.parseInt(taula.get(i + 1));
                 tallestID = i;
             }
         }
         System.out.printf("Mendi altuena %s da %d-eko altuerarekin. \n", taula.get(tallestID), tallest);
     }
-
 }
