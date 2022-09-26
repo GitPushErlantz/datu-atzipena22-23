@@ -2,30 +2,27 @@ package dambi;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class MainMenua {
     public static void main(String[] args) {
         int aukera = 9;
         Scanner in = new Scanner(System.in);
-        System.out.println("* /sys/ Attempting to read file...");
-        ArrayList<String> taula = new ArrayList<String>(); //Create the ArrayList so it can be detected everywhere
-        try (FileReader inputStream = new FileReader("Mendiak.csv")) { //Try finding the file and creating the FileReader
-            System.out.println("* /sys/ File successfully read!");
+        System.out.println("* /sys/ Attempting to read file..."); //TODO: Verbosea kendu
+        ArrayList<String> taula = new ArrayList<>(); //Create the ArrayList so it can be detected everywhere
+        try (FileReader fr = new FileReader("Mendiak.csv")) { //Try finding the file and creating the FileReader
             //ArrayListera hitzak sartu
-            //TODO: ReadLine erabili letraz letra egin ordez
-            int ch;
-            String word = "";
-            while ((ch = inputStream.read()) != -1) {
-                if((char)ch != ';' && (char)ch != '\n'){
-                    word = word + (char)ch;
-                }
-                else{
-                    taula.add(word);
-                    word = "";
-                }
+            BufferedReader br = new BufferedReader(fr);
+            String line;
+            line = br.readLine();
+            while (line != null) { //while there are new lines
+                String[] gehitu; //new array of strings (mendi baten datu denak)
+                gehitu = line.split(";");
+                Collections.addAll(taula, gehitu);
+                line = br.readLine();
             }
-            taula.add(word);
+            System.out.println("* /sys/ File successfully read!"); //TODO: Verbosea kendu
         } catch (FileNotFoundException e) {
             System.out.println("* /sys/ File not found");
             System.out.println("* /help/ You're here: " + new File("").getAbsoluteFile()); //helps debugging
@@ -46,14 +43,13 @@ public class MainMenua {
                 System.out.println();
                 System.out.print("Aukeratu zenbaki bat: ");
                 aukera = in.nextInt();
+                System.out.println();
                 switch (aukera) {
                     case 1:
-                        //TODO: zerrenda ikusi
                         zerrenda(taula);
                         break;
                     case 2:
-                        //TODO: altuena bistaratu
-                        //altuena(taula);
+                        altuena(taula);
                         break;
                     case 3:
                         //TODO: esportatu
@@ -63,17 +59,36 @@ public class MainMenua {
                         break;
                     case 0:
                         //atera
-                        System.out.println("Eskerrik asko programa hau erabiltzeagatik.");
+                        System.out.println("Agur eta eskerrik asko :)");
                         break;
                     default:
-                        System.out.println("Aukera okerra. Saiatu berriz.");
+                        System.out.println("Aukera okerra, saiatu berriz.");
                 }
+                System.out.println();
             } while (aukera != 0);
             in.close();
         }
     }
 
     public static void zerrenda(ArrayList<String> taula) {
-        //TODO: Zerrenda formatu onean jarri
+        for (int i = 0; i < taula.size(); i += 3) { //grabs groups of 3
+            for (int j = 0; j <= 2; ++j) { //prints the group of 3
+                System.out.printf("%15s", taula.get(i + j));
+            }
+            System.out.println(); //newline after the group is printed
+        }
     }
+
+    public static void altuena(ArrayList<String> taula) {
+        int tallest = 0;
+        int tallestID = 0;
+        for(int i = 3; i < taula.size(); i+=3) { //grabs groups of 3, also skips the title
+            if (Integer.parseInt(taula.get(i+1)) > tallest) {
+                tallest = Integer.parseInt(taula.get(i+1));
+                tallestID = i;
+            }
+        }
+        System.out.printf("Mendi altuena %s da %d-eko altuerarekin. \n", taula.get(tallestID), tallest);
+    }
+
 }
