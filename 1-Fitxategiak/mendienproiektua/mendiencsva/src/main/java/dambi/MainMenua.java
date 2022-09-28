@@ -88,4 +88,17 @@ public class MainMenua {
         }
         System.out.printf("Mendi altuena %s da %d-eko altuerarekin. \n", taula.get(tallestID), tallest);
     }
+
+    public static void esportatu(ArrayList<String> taula) {
+        ArrayList<String> araba = new ArrayList<>();
+        ArrayList<String> bizkaia = new ArrayList<>();
+        ArrayList<String> gipuzkoa = new ArrayList<>();
+        for (int i = 3; i < taula.size(); i += 3) { //grabs groups of 3, also skips the title
+            switch (taula.get(i + 2).toLowerCase()) { //separates into arraylists, adds names
+                case "araba" -> araba.add(taula.get(i));
+                case "bizkaia" -> bizkaia.add(taula.get(i));
+                case "gipuzkoa" -> gipuzkoa.add(taula.get(i));
+            }
+        }
+    }
 }
