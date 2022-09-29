@@ -9,7 +9,7 @@ public class MainMenua {
     public static void main(String[] args) {
         int aukera = 9;
         Scanner in = new Scanner(System.in);
-        System.out.println("* /sys/ Attempting to read file..."); //TODO: Verbosea kendu
+        //System.out.println("* /sys/ Attempting to read file..."); //TODO: Verbosea kendu
         ArrayList<String> taula = new ArrayList<>(); //Create the ArrayList so it can be detected everywhere
         try (FileReader fr = new FileReader("Mendiak.csv")) { //Try finding the file and creating the FileReader
             //ArrayListera hitzak sartu
@@ -22,7 +22,7 @@ public class MainMenua {
                 Collections.addAll(taula, gehitu);
                 line = br.readLine();
             }
-            System.out.println("* /sys/ File successfully read!"); //TODO: Verbosea kendu
+            //System.out.println("* /sys/ File successfully read!"); //TODO: Verbosea kendu
         } catch (FileNotFoundException e) {
             System.out.println("* /sys/ File not found");
             System.out.println("* /help/ You're here: " + new File("").getAbsoluteFile()); //helps debugging
@@ -37,32 +37,20 @@ public class MainMenua {
                 System.out.println("1. Mendien zerrenda ikusi (taula formatuan)");
                 System.out.println("2. Mendirik altuena bistaratu");
                 System.out.println("3. Mendiak esportatu (Araba.csv, Bizkaia.csv, Gipuzkoa.csv)");
-                System.out.println("4. ...");
                 System.out.println("0. IRTEN");
                 System.out.println();
                 System.out.print("Aukeratu zenbaki bat: ");
                 aukera = in.nextInt();
                 System.out.println();
-                switch (aukera) {
-                    case 1:
-                        zerrenda(taula);
-                        break;
-                    case 2:
-                        altuena(taula);
-                        break;
-                    case 3:
-                        //TODO: esportatu
-                        //esportatu(taula);
-                        break;
-                    case 4:
-                        break;
-                    case 0:
-                        //atera
+            switch (aukera) {
+                case 1 -> zerrenda(taula);
+                case 2 -> altuena(taula);
+                case 3 -> esportatu(taula);
+                case 0 ->
+                    //atera
                         System.out.println("Agur eta eskerrik asko :)");
-                        break;
-                    default:
-                        System.out.println("Aukera okerra, saiatu berriz.");
-                }
+                default -> System.out.println("Aukera okerra, saiatu berriz.");
+            }
                 System.out.println();
             }
             in.close();
@@ -94,11 +82,26 @@ public class MainMenua {
         ArrayList<String> bizkaia = new ArrayList<>();
         ArrayList<String> gipuzkoa = new ArrayList<>();
         for (int i = 3; i < taula.size(); i += 3) { //grabs groups of 3, also skips the title
-            switch (taula.get(i + 2).toLowerCase()) { //separates into arraylists, adds names
-                case "araba" -> araba.add(taula.get(i));
-                case "bizkaia" -> bizkaia.add(taula.get(i));
-                case "gipuzkoa" -> gipuzkoa.add(taula.get(i));
+                switch (taula.get(i + 2).toLowerCase()) { //separates into arraylists, adds names
+                    case "araba" -> araba.add(taula.get(i) + "; " + taula.get(i+1) + "; " + taula.get(i+2)); //Grab name, height, province
+                    case "bizkaia" -> bizkaia.add(taula.get(i) + "; " + taula.get(i+1) + "; " + taula.get(i+2));
+                    case "gipuzkoa" -> gipuzkoa.add(taula.get(i) + "; " + taula.get(i+1) + "; " + taula.get(i+2));
+                }
+        }
+            idatziBanaka("araba.csv", araba);
+            idatziBanaka("gipuzkoa.csv", gipuzkoa);
+            idatziBanaka("bizkaia.csv", bizkaia);
+    }
+
+    public static void idatziBanaka(String fileName, ArrayList<String> probintzia){
+        File csvFile = new File(fileName);
+        try (PrintWriter csvWriter = new PrintWriter(new FileWriter(csvFile))) {
+            for(int i = 1; i < probintzia.size(); ++i) {
+                csvWriter.println(probintzia.get(i));
             }
+            System.out.println("Esportatua!");
+        } catch (IOException e) {
+            System.out.println("* /sys/ Error (idatziBanaka)");
         }
     }
 }

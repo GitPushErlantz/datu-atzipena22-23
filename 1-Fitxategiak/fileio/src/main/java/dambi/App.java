@@ -7,6 +7,31 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+        //TODO: menu bat gehitu
+        int aukera = 9;
+        while (aukera != 0) {
+            try(Scanner uwu = new Scanner(System.in)) {
+                System.out.println("MENUA");
+                System.out.println("1. Direktorioa existitzen den begiratu");
+                aukera = uwu.nextInt();
+                switch(aukera) {
+                    case 1:
+                        existitzenDa();
+                        break;
+                    case 2:
+                        //TODO
+                        break;
+                    default:
+                        System.out.println("Agur!");
+                        break;
+                }
+            } catch (Exception e) {
+                System.out.println("uwu");
+            }
+         }
+    }
+
+    public static void existitzenDa() {
         String input;
         try (Scanner in = new Scanner(System.in)) {
             System.out.print("Sartu direktorioaren ruta: ");
@@ -21,4 +46,5 @@ public class App {
             System.out.println("Errore bat gertatu da");
         }
     }
+
 }
