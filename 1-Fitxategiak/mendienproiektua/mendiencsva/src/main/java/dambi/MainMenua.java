@@ -99,7 +99,7 @@ public class MainMenua {
             for(int i = 1; i < probintzia.size(); ++i) {
                 csvWriter.println(probintzia.get(i));
             }
-            System.out.println("Esportatua!");
+            System.out.println(fileName + " esportatua!");
         } catch (IOException e) {
             System.out.println("* /sys/ Error (idatziBanaka)");
         }
