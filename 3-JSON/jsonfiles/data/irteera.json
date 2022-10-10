@@ -1,0 +1,19 @@
+{
+  "firstName": "Erlantz",
+  "lastName": "Garate",
+  "age": 19,
+  "streetAddress": "123 Nere etxia",
+  "city": "Nere herria",
+  "state": "EH",
+  "postalCode": "12345",
+  "phoneNumbers": [
+    {
+      "type": "mobile",
+      "number": "688123456"
+    },
+    {
+      "type": "home",
+      "number": "943123456"
+    }
+  ]
+}
